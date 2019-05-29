@@ -4,13 +4,12 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom"
-import { Box, Grommet } from 'grommet';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import { Box, Grommet } from 'grommet';
 import Home from "./Home"
 import About from "./About"
 import Services from "./Services"
@@ -18,11 +17,25 @@ import Contact from "./Contact"
  
 const theme = {
   global: {
-    font: {
-      family: 'Roboto',
-      size: '18px',
-      height: '20px',
-    },
+    colors: {
+        'light-2': '#f5f5f5',
+        'text': {
+          light: 'rgba(0, 0, 0, 0.87)',
+        },
+      },
+      edgeSize: {
+        small: '14px',
+      },
+      elevation: {
+        light: {
+          medium: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
+        },
+      },    
+      font: {
+        family: 'Roboto',
+        size: '18px',
+        height: '20px',
+      },
   },
 };
 
@@ -50,11 +63,11 @@ class Main extends Component {
                     The Researchist
                   </Typography>
                   <Box direction='row'>
-                    <Button><NavLink exact to="/">Home</NavLink></Button>
-                    <Button><NavLink to="/about">About</NavLink></Button>
-                    <Button><NavLink to="/services">Services</NavLink></Button>
-                    <Button><NavLink to="/contact">Contact</NavLink></Button>
-                  </Box>                  
+                    <Button component={NavLink} exact to="/">Home</Button>
+                    <Button component={NavLink} to="/about">About</Button>
+                    <Button component={NavLink} to="/services">Services</Button>
+                    <Button component={NavLink} to="/contact">Contact</Button>
+                  </Box>         
                 </AppBar>
 
                 <div className="content">
