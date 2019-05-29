@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "latest",
+    "classnames": "^2.2.6",
     "grommet": "^2.7.1",
     "polished": "^3.4.0",
+    "prop-types": "latest",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
