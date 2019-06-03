@@ -14,6 +14,7 @@ class About extends Component {
           <li>Eget erat</li>
           <li>Id porttitor</li>
           <li>Id porttitor</li>
+          <li>Id porttitor</li>
         </ol>
       </div>
     );
